@@ -1,7 +1,14 @@
-````markdown
 # Pushbullet Desktop
 
 A lightweight Electron wrapper for the Pushbullet web interface, built with Vite, React, and Electron. This app runs natively on your desktop (macOS/Windows/Linux) and provides quick access to Pushbullet notifications, messages, and file sharing — without using a browser tab.
+
+![Build](https://github.com/SpiritStack/pushbullet-desktop/actions/workflows/release.yml/badge.svg)
+![Release](https://img.shields.io/github/v/release/SpiritStack/pushbullet-desktop?style=flat-square)
+![License](https://img.shields.io/github/license/SpiritStack/pushbullet-desktop?style=flat-square)
+![Dependabot](https://img.shields.io/badge/dependabot-enabled-brightgreen?style=flat-square)
+![Platform](https://img.shields.io/badge/platform-macOS-blue?style=flat-square)
+![Framework](https://img.shields.io/badge/framework-Electron-brightgreen?style=flat-square)
+![Tech](https://img.shields.io/badge/built_with-Vite_+_React-purple?style=flat-square)
 
 ---
 
@@ -19,7 +26,7 @@ A lightweight Electron wrapper for the Pushbullet web interface, built with Vite
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/pushbullet-desktop.git
+git clone https://github.com/SpiritStack/pushbullet-desktop.git
 cd pushbullet-desktop
 ````
 
@@ -111,7 +118,7 @@ release/Pushbullet Desktop-1.0.0.dmg
 
 ## ✍️ Author
 
-Made with ❤️ by [Vikash Sharma](https://github.com/vikashsharma)
+Made with ❤️ by [Vikash Sharma](https://github.com/SpiritStack)
 
 ---
 
