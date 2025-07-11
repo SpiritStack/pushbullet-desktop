@@ -1,56 +1,122 @@
+````markdown
 # Pushbullet Desktop
-❯ npm install
 
-added 311 packages, and audited 312 packages in 10s
+A lightweight Electron wrapper for the Pushbullet web interface, built with Vite, React, and Electron. This app runs natively on your desktop (macOS/Windows/Linux) and provides quick access to Pushbullet notifications, messages, and file sharing — without using a browser tab.
 
-65 packages are looking for funding
-  run `npm fund` for details
+---
 
-7 vulnerabilities (2 low, 4 moderate, 1 high)
+## 🚀 Features
 
-To address all issues, run:
-  npm audit fix
+- Built with ⚡ Vite + React
+- Packaged as a native desktop app using Electron
+- Works offline with local assets
+- Mac `.dmg` build support included
 
-Run `npm audit` for details.
-❯ npm run dev
+---
 
-> vite-react-typescript-starter@0.0.0 dev
-> vite
+## 📦 Installation (For Developers)
 
+### 1. Clone the repository
 
-  VITE v5.4.8  ready in 615 ms
+```bash
+git clone https://github.com/yourusername/pushbullet-desktop.git
+cd pushbullet-desktop
+````
 
-  ➜  Local:   http://localhost:5173/
-  ➜  Network: use --host to expose
-  ➜  press h + enter to show help
-Browserslist: caniuse-lite is outdated. Please run:
-  npx update-browserslist-db@latest
-  Why you should do it regularly: https://github.com/browserslist/update-db#readme
-^C
-❯ npx vite build
+### 2. Install dependencies
 
-vite v5.4.8 building for production...
-transforming (3) src/main.tsxBrowserslist: caniuse-lite is outdated. Please run:
-  npx update-browserslist-db@latest
-  Why you should do it regularly: https://github.com/browserslist/update-db#readme
-✓ 1479 modules transformed.
-dist/index.html                   0.49 kB │ gzip:  0.32 kB
-dist/assets/index-BW3ZPniA.css   18.27 kB │ gzip:  4.05 kB
-dist/assets/index-DBSiMCjr.js   201.98 kB │ gzip: 58.68 kB
-✓ built in 1.21s
-/Users/offline/learning/github/pushbullet-desktop main ⇡                                                                                                                                                                  15:14:58
-❯ 
+```bash
+npm install
+```
 
+### 3. Run in development mode (browser)
 
+```bash
+npm run dev
+```
 
+Then open `http://localhost:5173` in your browser.
 
+---
 
+## 🖥️ Run as Electron App (Desktop)
 
+Build and run locally in Electron:
 
+```bash
+npm run desktop
+```
 
+This will:
 
+* Build the Vite app (`dist/`)
+* Launch Electron using the local `index.html`
 
+---
 
+## 📦 Package as Native App (DMG for macOS)
 
+Build the desktop app and create a `.dmg` installer:
 
+```bash
+npm run dist
+```
 
+After the build, your `.dmg` will be located in:
+
+```
+release/Pushbullet Desktop-1.0.0.dmg
+```
+
+> Note: Windows `.exe` and Linux `.AppImage` builds can also be configured via `electron-builder`.
+
+---
+
+## 🔧 Scripts
+
+| Script            | Description                               |
+| ----------------- | ----------------------------------------- |
+| `npm run dev`     | Start Vite dev server                     |
+| `npm run build`   | Build Vite frontend                       |
+| `npm run desktop` | Build frontend and launch Electron        |
+| `npm run dist`    | Package native app using Electron Builder |
+
+---
+
+## 📁 Project Structure
+
+```
+.
+├── electron/           # Electron main process
+│   └── main.cjs
+├── public/             # Public static assets
+├── src/                # React source files
+├── dist/               # Production build output (auto-generated)
+├── release/            # Packaged apps (.dmg/.exe/.AppImage)
+├── package.json
+├── vite.config.ts
+└── README.md
+```
+
+---
+
+## 🛠️ Tech Stack
+
+* [React](https://reactjs.org/)
+* [Vite](https://vitejs.dev/)
+* [Electron](https://www.electronjs.org/)
+* [Electron Builder](https://www.electron.build/)
+
+---
+
+## ✍️ Author
+
+Made with ❤️ by [Vikash Sharma](https://github.com/vikashsharma)
+
+---
+
+## 📄 License
+
+MIT License
+
+```
