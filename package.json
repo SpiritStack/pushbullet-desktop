@@ -1,11 +1,30 @@
 {
-  "name": "vite-react-typescript-starter",
+  "name": "pushbullet-desktop",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "main": "electron/main.cjs",
   "type": "module",
+  "build": {
+    "appId": "com.vikash.pushbulletdesktop",
+    "productName": "Pushbullet Desktop",
+    "mac": {
+      "target": "dmg"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "electron": "electron electron/main.cjs",
+    "desktop": "npm run build && npm run electron",
+    "dist": "npm run build && electron-builder",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -20,6 +39,8 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.18",
+    "electron": "^37.2.1",
+    "electron-builder": "^26.0.12",
     "eslint": "^9.9.1",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.11",
